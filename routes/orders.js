@@ -16,7 +16,6 @@ router.get('/orderlist', (req, res, next) => {
 router.post('/saveOrder', (req, res, next) => {
 
     const orderId = uuid.v1();
-    console.log("orderId"+orderId);
     const orderDate =req.body.orderDate;
     const orderCost =req.body.orderCost;
 
