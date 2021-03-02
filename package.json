@@ -1,0 +1,17 @@
+{
+  "name": "swb-plus-node",
+  "version": "0.0.0",
+  "description": "SWBPlus_node",
+  "scripts": {
+    "start": "set NODE_ENV=local && node ./bin/www PORT=3000 nodemon app.js"
+  },
+  "author": "Mukesh Choudhary",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "winston": "^3.3.3"
+  }
+}
