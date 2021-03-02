@@ -3,6 +3,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require("fs"); 
+const uuid = require('uuid');
 router.use(cors());
 
 const order = require('../orders.json');
@@ -12,17 +13,18 @@ router.get('/orderlist', (req, res, next) => {
     res.status(200).json(order);
 });
 
-router.post('/saveProduct', (req, res, next) => {
+router.post('/saveOrder', (req, res, next) => {
 
-    const orderId =req.body.orderId;
-    const releaseDate =req.body.releaseDate;
+    const orderId = uuid.v1();
+    console.log("orderId"+orderId);
+    const orderDate =req.body.orderDate;
     const orderCost =req.body.orderCost;
 
     console.log(JSON.stringify(order));
 
     let new_order =            {
         "orderId": orderId,
-        "releaseDate": releaseDate,
+        "orderDate": orderDate,
         "orderCost": orderCost
       }
 

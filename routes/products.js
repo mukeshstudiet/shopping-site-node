@@ -16,7 +16,7 @@ router.post('/addProduct', (req, res, next) => {
     const productId =req.body.productId;
     const productName =req.body.productName;
     const productCode =req.body.productCode;
-    const releaseDate =req.body.releaseDate;
+    const orderDate =req.body.orderDate;
     const description =req.body.description;
     const price =req.body.price;
     const starRating =req.body.starRating;
@@ -26,7 +26,7 @@ router.post('/addProduct', (req, res, next) => {
         "productId": productId,
         "productName": productName,
         "productCode": productCode,
-        "releaseDate": releaseDate,
+        "orderDate": orderDate,
         "description": description,
         "price": price,
         "starRating": starRating,
